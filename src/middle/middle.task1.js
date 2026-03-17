@@ -1,12 +1,15 @@
 /**
- * @param {number[]} initialArray - Исходный массив
- * @param {number} multiplier - Множитель
+ * @description 
+ * Подсчет суммы элементов массива, корректно 
+ * переводимых из строки в численный вид.
+ * 
+ * @privateRemarks
+ * До 1.75 баллов
+ * 
+ * @param {string[]} values - Массив строк
+ * @returns {number} Сумма по численным данным
  *
- * @returns {number[]} Новый массив
- *
- * @description Возвращает массив с элементами, полученными
- * перемножением всех элементов исходного массива на число
  */
-export function multipliedByN(initialArray, multiplier) {
-    return initialArray
+export function calculateSum(values) {
+    return 0
 }

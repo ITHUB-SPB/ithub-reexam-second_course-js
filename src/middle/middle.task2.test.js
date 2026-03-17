@@ -1,34 +1,32 @@
 import { describe, test, expect, assert } from 'vitest'
-import { calculateSum } from './middle.task2'
+import { generateArray } from './middle.task2'
 
-describe('обработка особых случаев', () => {
-    test('[0.25] отсутствие данных', ({ annotate }) => {
-        annotate(0.25)
-
-        expect(() => calculateSum([])).toThrowError('Передан пустой массив')
-    })
-
-    test('[0.5] отсутствие корректных данных', ({ annotate }) => {
+describe('возвращает массив с объектами, преобразованными в массивы значений', () => {
+    test('[0.5] обрабатывает множественные свойства', ({ annotate }) => {
         annotate(0.5)
 
-        expect(() => calculateSum(['abc5', '5g'])).toThrowError(
-            'Отсутствуют численные данные',
-        )
+        const data = [[1], { id: 40, part: 10 }, [100]]
+        const expected = [[1], [40, 10], [100]]
+
+        assert.deepEqual(generateArray(data), expected)
     })
-})
 
-test('[0.75] работает на базовых случаях', ({ annotate }) => {
-    annotate(0.75)
+    test('[0.5] обрабатывает множественные объекты', ({ annotate }) => {
+        annotate(0.5)
 
-    expect(calculateSum(['10.5', 'Строка', '5g', '15', '05'])).toBe(30.5)
-})
+        const data = [[1], { id: 40 }, [100], { part: 10 }]
+        const expected = [[1], [40], [100], [10]]
 
-test('[0.5] не модифицирует массив', ({ annotate }) => {
-    annotate(0.5)
+        assert.deepEqual(generateArray(data), expected)
+    })
 
-    const values = ['10.5', 'Строка', '5g', '15', '05']
-    const expected = [...values]
+    test('[0.5] модифицирует исходный массив', ({ annotate }) => {
+        annotate(0.5)
 
-    calculateSum(values)
-    assert.deepEqual(values, expected)
+        const data = [[1], { id: 40 }, [100], { part: 10 }]
+        const expected = [[1], [40], [100], [10]]
+
+        generateArray(data)
+        assert.deepEqual(data, expected)
+    })
 })

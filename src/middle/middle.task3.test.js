@@ -1,7 +1,7 @@
 import { test, expect, vi } from 'vitest'
 import { reverseArray } from './middle.task3'
 
-test('[1] выводит развернутый массив в консоль', ({ annotate }) => {
+test('[1] разворачивает массив с выводом в консоль', ({ annotate }) => {
     annotate(1)
 
     const spy = vi.spyOn(console, 'log')
@@ -15,8 +15,8 @@ test('[1] выводит развернутый массив в консоль',
     vi.restoreAllMocks()
 })
 
-test('[0.75] модифицирует массив на месте', ({ annotate }) => {
-    annotate(0.75)
+test('[0.5] модифицирует массив на месте', ({ annotate }) => {
+    annotate(0.5)
 
     const spy = vi.spyOn(console, 'log')
 

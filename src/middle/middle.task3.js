@@ -1,8 +1,13 @@
 /**
+ * @description 
+ * Разворачивает массив на месте с выводом результата в консоль
+ * 
+ * @privateRemarks
+ * до 1.5 баллов
+ * 
  * @param {any[]} initialArray - Исходный массив
  * @returns {undefined}
  *
- * @description Разворот массива на месте с выводом в консоль
  */
 export function reverseArray(initialArray) {
     return

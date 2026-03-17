@@ -1,9 +1,9 @@
 import { test, expect, vi, describe, assert } from 'vitest'
-import { splitName, toSplittedNames } from './task3'
+import { splitName, toSplittedNames } from './senior.task1'
 
 describe('функция splitName', () => {
-    test('[1] обрабатывает имя и фамилию', ({ annotate }) => {
-        annotate(1)
+    test('[0.5] обрабатывает имя и фамилию', ({ annotate }) => {
+        annotate(0.5)
 
         const expected = {
             firstName: 'Steven',
@@ -35,8 +35,8 @@ describe('функция toSplittedNames', () => {
         assert.deepEqual(toSplittedNames(names), expected)
     })
 
-    test('[0.5] использует функцию splitName и метод map', ({ annotate }) => {
-        annotate(0.5)
+    test('[0.25] использует функцию splitName и метод map', ({ annotate }) => {
+        annotate(0.25)
 
         const names = ['Steven King', 'Oliver', 'Persius Master']
 
@@ -47,8 +47,8 @@ describe('функция toSplittedNames', () => {
         expect(spy).toBeCalledWith(splitName)
     })
 
-    test('[0.5] не модифицирует исходные данные', ({ annotate }) => {
-        annotate(0.5)
+    test('[0.25] не модифицирует исходные данные', ({ annotate }) => {
+        annotate(0.25)
 
         const names = ['Steven King', 'Oliver', 'Persius Master']
 

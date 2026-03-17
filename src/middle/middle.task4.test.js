@@ -10,6 +10,7 @@ describe('обработка базовых случаев', () => {
         expect(
             hasCorrectElement([1, -5, 0, 0.17, null], callbackFunction),
         ).toBe(true)
+
         expect(hasCorrectElement([-10, -5, 0, null], callbackFunction)).toBe(
             false,
         )
@@ -24,9 +25,11 @@ describe('обработка базовых случаев', () => {
         expect(
             hasCorrectElement([1, -10, undefined, 0], callbackFunction),
         ).toBe(false)
+
         expect(
             hasCorrectElement([Number('abc'), 10, 5], callbackFunction),
         ).toBe(true)
+        
         expect(hasCorrectElement([10, null, 5], callbackFunction)).toBe(true)
     })
 
@@ -38,16 +41,7 @@ describe('обработка базовых случаев', () => {
         expect(hasCorrectElement([1, 3, '5', null], callbackFunction)).toBe(
             false,
         )
+
         expect(hasCorrectElement([1, '', 'abc'], callbackFunction)).toBe(true)
     })
-})
-
-test('[0.25] не производит лишних вычислений', ({ annotate }) => {
-    annotate(0.25)
-
-    const callbackFunction = (value) => value === ''
-
-    // допишу проверку
-
-    expect(hasCorrectElement([''], callbackFunction)).toBe(true)
 })

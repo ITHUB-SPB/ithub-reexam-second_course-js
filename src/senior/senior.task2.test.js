@@ -1,8 +1,8 @@
 import { test, assert, describe, expect } from 'vitest'
-import { joinObjects } from './task6'
+import { joinObjects } from './senior.task2'
 
 describe('возвращает объединенный объект', () => {
-    test('[0.75] базовый случай (объединение)', ({ annotate }) => {
+    test('[0.5] базовый случай (объединение)', ({ annotate }) => {
         annotate(0.5)
 
         const objectFirst = { id: 1 }
@@ -13,7 +13,7 @@ describe('возвращает объединенный объект', () => {
         assert.deepEqual(joinObjects(objectFirst, objectSecond), expected)
     })
 
-    test('[0.75] базовый случай (обновление)', ({ annotate }) => {
+    test('[0.5] базовый случай (обновление)', ({ annotate }) => {
         annotate(0.5)
 
         const objectFirst = { id: 1, status: 'draft' }
@@ -33,7 +33,7 @@ describe('возвращает объединенный объект', () => {
         )
     })
 
-    test('[0.5] один объект', ({ annotate }) => {
+    test('[0.25] один объект', ({ annotate }) => {
         annotate(0.25)
 
         assert.deepEqual(
@@ -43,7 +43,7 @@ describe('возвращает объединенный объект', () => {
         )
     })
 
-    test('[0.5] отсутствие аргументов', ({ annotate }) => {
+    test('[0.25] отсутствие аргументов', ({ annotate }) => {
         annotate(0.25)
 
         expect(() => joinObjects()).toThrowError(
@@ -52,8 +52,8 @@ describe('возвращает объединенный объект', () => {
     })
 })
 
-test('[0.5] не модифицирует исходные объекты', ({ annotate }) => {
-    annotate(0.5)
+test('[0.25] не модифицирует исходные объекты', ({ annotate }) => {
+    annotate(0.25)
 
     const objectFirst = { id: 1 }
     const objectSecond = { status: 'draft', created: '2025-05-05' }

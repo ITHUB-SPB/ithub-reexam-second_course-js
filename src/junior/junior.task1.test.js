@@ -1,46 +1,26 @@
 import { describe, test, expect } from 'vitest'
-import { processWord } from './junior.task1'
+import { getMultiplesOfThree } from './junior.task1'
 
-describe('обработка некорректных данных', () => {
-    test('[0.25] если слово содержит небуквенные символы, выдается ошибка', ({
-        annotate,
-    }) => {
-        annotate(0.25)
-        expect(() => processWord('abc123', 'a')).toThrowError(
-            'Слово содержит небуквенные символы',
-        )
+describe('обработка базовых случаев', () => {
+    test('[0.5] работает на базовых случаях', ({ annotate }) => {
+        annotate(0.5)
+        expect(getMultiplesOfThree(11)).toBe('3, 6, 9')
+        expect(getMultiplesOfThree(14)).toBe('3, 6, 9, 12')
     })
 
-    test('[0.25] если пользователь отменяет ввод, выдается ошибка', ({
-        annotate,
-    }) => {
+    test('[0.25] правая граница включена в вывод', ({ annotate }) => {
         annotate(0.25)
-        expect(() => processWord(null, 'a')).toThrowError('Некорректное слово')
-        expect(() => processWord('Рай', null)).toThrowError(
-            'Не указан игнорируемый символ',
-        )
+        expect(getMultiplesOfThree(9)).toBe('3, 6, 9')
+    })
+
+    test('[0.25] не добавляет лишние разделители', ({ annotate }) => {
+        annotate(0.25)
+        expect(getMultiplesOfThree(4)).toBe('3')
+    })
+
+    test('[0.25] выдает пустую строку, если кратных нет', ({ annotate }) => {
+        annotate(0.25)
+        expect(getMultiplesOfThree(2)).toBe('')
     })
 })
 
-test('[0.25] работает при единственном вхождении игнорируемого символа', ({
-    annotate,
-}) => {
-    annotate(0.25)
-    expect(processWord('Рай', 'а')).toBe('Рй')
-    expect(processWord('Мячик', 'м')).toBe('ячик')
-})
-
-test('[0.5] работает при множественном вхождении игнорируемого символа', ({
-    annotate,
-}) => {
-    annotate(0.5)
-    expect(processWord('Идиллия', 'И')).toBe('длля')
-    expect(processWord('Погода', 'о')).toBe('Пгда')
-})
-
-test('[0.25] если игнорируемого символа нет в строке, отдается исходная', ({
-    annotate,
-}) => {
-    annotate(0.25)
-    expect(processWord('Погода', 'я')).toBe('Погода')
-})

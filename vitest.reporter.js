@@ -40,7 +40,7 @@ export default class CustomReporter extends DefaultReporter {
       .map(([key, value]) => `${key.split('/').at(-1)} => ${value}`)
       .join('\n')
 
-    console.log(`\n----- Scores -----\n\n${scoresString}`)
-    console.log(`\n----- Final Score -----\n\n${this.#score} / 8\n\n`)
+    console.log(`\n----- Баллы за задачи -----\n\n${scoresString}`)
+    console.log(`\n----- Итоговый балл -----\n\n${this.#score} / 14 \n\n`)
   }
 }

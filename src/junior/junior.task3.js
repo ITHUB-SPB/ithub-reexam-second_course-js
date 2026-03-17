@@ -1,28 +1,23 @@
 /**
- * @param {string} height - Высота лесенки
- * @returns {string} Строка с отображением лесенки
- * @description Формирование строки с лесенкой заданной длины
+ * @description 
+ * Формирует и возвращает новый массив с элементами, 
+ * полученными перемножением элементов исходного массива 
+ * на переданное число (не модифицируя исходный массив).
+ * 
+ * @privateRemarks
+ * до 1.5 баллов
+ * 
+ * @example
+ * // returns [0, 4, 6, -6]
+ * multipliedByN([0, 2, 3, -2], 2)
+ * 
+ * @param {number[]} initialArray - Исходный массив
+ * 
+ * @param {number} multiplier - Множитель
+ *
+ * @returns {number[]} Новый массив
+ *
  */
-export function renderLadder(height) {
-    if (height === null) {
-        throw new Error('Пользователь отменил ввод')
-    }
-
-    const h = Number(height)
-
-    if (isNaN(h) || h < 0 || Math.floor(h) !== h) {
-        throw new Error('Некорректные входные данные')
-    }
-
-    if (h === 0) {
-        return ''
-    }
-
-    if (h === 1) {
-        return '1'
-    }
-
-    let result = ''
-
-    return result
+export function multipliedByN(initialArray, multiplier) {
+    return initialArray
 }
