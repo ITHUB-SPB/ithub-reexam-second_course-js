@@ -1,5 +1,5 @@
 import { test, assert, describe, expect } from 'vitest'
-import { joinObjects } from './task3'
+import { joinObjects } from './task6'
 
 describe('возвращает объединенный объект', () => {
     test('[0.75] базовый случай (объединение)', ({ annotate }) => {

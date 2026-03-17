@@ -1,5 +1,5 @@
 import { describe, test, expect, assert } from 'vitest'
-import { checkObject } from './task2'
+import { checkObject } from './task8'
 
 describe('возвращает объект с информацией о наличии ключей', () => {
     test('[1] работает на базовых случаях', ({ annotate }) => {

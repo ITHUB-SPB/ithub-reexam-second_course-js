@@ -1,5 +1,5 @@
 import { assert, test } from 'vitest'
-import { multipliedByN } from './task1'
+import { multipliedByN } from './middle.task1'
 
 test('[1] возвращает массив с перемноженными элементами', ({ annotate }) => {
     annotate(1)

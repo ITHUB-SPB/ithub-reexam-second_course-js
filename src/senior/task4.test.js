@@ -1,5 +1,5 @@
 import { assert, test, describe } from 'vitest'
-import { extractValues } from './task1'
+import { extractValues } from './task4'
 
 describe('возвращает массив, содержащий значения свойств объектов', () => {
     test('[0.5] базовый случай', ({ annotate }) => {

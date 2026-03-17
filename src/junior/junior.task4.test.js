@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { isPalindrome } from './task4'
+import { isPalindrome } from './junior.task4'
 
 describe('обработка некорректных данных', () => {
     test('[0.125] выдается ошибка, если пользователь отменяет ввод', ({

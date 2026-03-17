@@ -1,5 +1,5 @@
 import { test, expect, describe, assert } from 'vitest'
-import { countPrices } from './task3'
+import { countPrices } from './task7'
 
 describe('возвращает количество интересующих строк', () => {
     test('[0.75] обрабатывает рубли', ({ annotate }) => {

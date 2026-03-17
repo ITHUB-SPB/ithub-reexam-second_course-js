@@ -1,5 +1,5 @@
 import { describe, test, expect, assert } from 'vitest'
-import { calculateSum } from './task2'
+import { calculateSum } from './middle.task2'
 
 describe('обработка особых случаев', () => {
     test('[0.25] отсутствие данных', ({ annotate }) => {

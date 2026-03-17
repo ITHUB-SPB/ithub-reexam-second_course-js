@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { hasCorrectElement } from './task4'
+import { hasCorrectElement } from './middle.task4'
 
 describe('обработка базовых случаев', () => {
     test('[0.5] проверка на наличие положительного числа', ({ annotate }) => {

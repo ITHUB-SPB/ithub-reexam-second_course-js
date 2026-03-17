@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { processWord } from './task1'
+import { processWord } from './junior.task1'
 
 describe('обработка некорректных данных', () => {
     test('[0.25] если слово содержит небуквенные символы, выдается ошибка', ({

@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { renderLadder } from './task3'
+import { renderLadder } from './junior.task3'
 
 describe('обработка некорректных данных', () => {
     test('[0.25] выдается ошибка, если пользователь отменяет ввод', ({

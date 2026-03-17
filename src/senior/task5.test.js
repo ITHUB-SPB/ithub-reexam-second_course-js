@@ -1,5 +1,5 @@
 import { describe, test, assert } from 'vitest'
-import { withMask } from './task2'
+import { withMask } from './task5'
 
 describe('возвращает массив маскированных слов', () => {
     test('[1.5] базовые случаи', ({ annotate }) => {

@@ -1,5 +1,5 @@
 import { test, expect, vi } from 'vitest'
-import { reverseArray } from './task3'
+import { reverseArray } from './middle.task3'
 
 test('[1] выводит развернутый массив в консоль', ({ annotate }) => {
     annotate(1)

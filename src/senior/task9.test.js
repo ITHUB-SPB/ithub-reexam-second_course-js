@@ -1,5 +1,5 @@
 import { test, describe, vi, expect } from 'vitest'
-import { logString } from './task1'
+import { logString } from './task9'
 
 describe('выводит строку в консоль', () => {
     test('[0.5] базовый случай', ({ annotate }) => {

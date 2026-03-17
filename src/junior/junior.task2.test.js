@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { getMultiplesOfThree } from './task2'
+import { getMultiplesOfThree } from './junior.task2'
 
 describe('обработка некорректных данных', () => {
     test('[0.25] если пользователь отменяет ввод, выдается ошибка', ({
